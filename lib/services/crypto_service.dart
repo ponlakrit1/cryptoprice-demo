@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:cryptocurrency_demo/modals/current_price.dart';
+import 'package:cryptocurrency_demo/models/current_price.dart';
 import 'package:dio/dio.dart';
 
 import '../utils/global.dart';

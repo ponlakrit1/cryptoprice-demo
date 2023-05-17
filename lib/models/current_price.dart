@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:cryptocurrency_demo/modals/update_time.dart';
+import 'package:cryptocurrency_demo/models/update_time.dart';
 
 import 'crypto.dart';
 
