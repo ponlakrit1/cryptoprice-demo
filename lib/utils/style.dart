@@ -5,13 +5,13 @@ const kSecondaryColor = Color(0xFF8B94E7);
 
 const kTextStyleHeader = TextStyle(
     fontFamily: 'Kanit',
-    fontSize: 28,
+    fontSize: 26,
 );
 
 const kTextStyleHeaderPrimary = TextStyle(
   color: kPrimaryColor,
   fontFamily: 'Kanit',
-  fontSize: 28,
+  fontSize: 26,
 );
 
 const kTextStyleSubHeader = TextStyle(

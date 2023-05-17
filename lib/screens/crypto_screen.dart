@@ -56,33 +56,66 @@ class _CryptoScreenState extends State<CryptoScreen> {
             return provider.busy ? const Text("Loading ...") : ListView(
               children: [
                 Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)
+                  ),
                   child: ListTile(
-                    leading: const Icon(IconData(0xe0b2, fontFamily: 'MaterialIcons')),
+                    leading: Container(
+                      width: 45,
+                      height: 45,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: kSecondaryColor,
+                      ),
+                      child: const Icon(IconData(0xe0b2, fontFamily: 'MaterialIcons'), size: 30.0, color: Colors.white,),
+                    ),
                     title: Text(provider.currentPrice.bpi.USD.code, style: kTextStyleSubHeaderPrimary,),
                     subtitle: Text(provider.currentPrice.bpi.USD.rate, style: kTextStyleHeader,),
-                    trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
+                    trailing: const Icon(Icons.arrow_forward_ios, color: kSecondaryColor,),
                     onTap: () {
                       provider.gotoCryptoDetailScreen(context, "USD");
                     },
                   ),
                 ),
                 Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)
+                  ),
                   child: ListTile(
-                    leading: const Icon(IconData(0xf04df, fontFamily: 'MaterialIcons')),
+                    leading: Container(
+                      width: 45,
+                      height: 45,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: kSecondaryColor,
+                      ),
+                      child: const Icon(IconData(0xf04df, fontFamily: 'MaterialIcons'), size: 30.0, color: Colors.white,),
+                    ),
                     title: Text(provider.currentPrice.bpi.EUR.code, style: kTextStyleSubHeaderPrimary,),
                     subtitle: Text(provider.currentPrice.bpi.EUR.rate, style: kTextStyleHeader,),
-                    trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
+                    trailing: const Icon(Icons.arrow_forward_ios, color: kSecondaryColor,),
                     onTap: () {
                       provider.gotoCryptoDetailScreen(context, "EUR");
                     },
                   ),
                 ),
                 Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)
+                  ),
                   child: ListTile(
-                    leading: const Icon(IconData(0xe23b, fontFamily: 'MaterialIcons')),
+                    leading: Container(
+                      width: 45,
+                      height: 45,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: kSecondaryColor,
+                      ),
+                      child: const Icon(IconData(0xe23b, fontFamily: 'MaterialIcons'), size: 30.0, color: Colors.white,),
+                    ),
                     title: Text(provider.currentPrice.bpi.GBP.code, style: kTextStyleSubHeaderPrimary,),
                     subtitle: Text(provider.currentPrice.bpi.GBP.rate, style: kTextStyleHeader,),
-                    trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
+                    trailing: const Icon(Icons.arrow_forward_ios, color: kSecondaryColor,),
                     onTap: () {
                       provider.gotoCryptoDetailScreen(context, "GBP");
                     },
