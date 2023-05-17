@@ -19,7 +19,7 @@ class CryptoDetail {
       symbol: json["symbol"] as String,
       rate: json["rate"] as String,
       description: json["description"] as String,
-      rateFloat: json["rateFloat"] as double,
+      rateFloat: json["rate_float"] as double,
     );
   }
 
@@ -28,6 +28,6 @@ class CryptoDetail {
     'symbol': symbol,
     'rate': rate,
     'description': description,
-    'rateFloat': rateFloat,
+    'rate_float': rateFloat,
   };
 }

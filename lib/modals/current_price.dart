@@ -1,7 +1,11 @@
+import 'dart:convert';
+
+import 'package:cryptocurrency_demo/modals/update_time.dart';
+
 import 'crypto.dart';
 
 class CurrentPrice {
-  late String time;
+  late UpdateTime time;
   late String disclaimer;
   late String chartName;
   late Crypto bpi;
@@ -15,17 +19,17 @@ class CurrentPrice {
 
   factory CurrentPrice.fromJson(Map<String, dynamic> json) {
     return CurrentPrice(
-      time: json["time"] as String,
+      time: UpdateTime.fromJson(json["time"]),
       disclaimer: json["disclaimer"] as String,
       chartName: json["chartName"] as String,
-      bpi: json["bpi"] as Crypto,
+      bpi: Crypto.fromJson(json["bpi"]),
     );
   }
 
   Map<String, dynamic> toJson() => {
-    'time': time,
+    'time': time.toJson(),
     'disclaimer': disclaimer,
     'chartName': chartName,
-    'bpi': bpi,
+    'bpi': bpi.toJson(),
   };
 }

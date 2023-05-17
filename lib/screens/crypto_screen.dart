@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/crypto_provider.dart';
 
 class CryptoScreen extends StatefulWidget {
   const CryptoScreen({Key? key}) : super(key: key);
@@ -12,6 +15,9 @@ class _CryptoScreenState extends State<CryptoScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      Provider.of<CryptoProvider>(context, listen: false).getCryptoCurrentPrice();
+    });
   }
 
   @override
@@ -24,8 +30,10 @@ class _CryptoScreenState extends State<CryptoScreen> {
               child: Text('Crypto'),
             ),
         ),
-        body: const SafeArea(
-            child: Text('Test text')
+        body: Consumer(
+          builder: (BuildContext context, CryptoProvider provider, child) {
+            return Container();
+          }
         )
     );
   }

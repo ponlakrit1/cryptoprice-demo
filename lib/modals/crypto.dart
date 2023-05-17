@@ -13,15 +13,15 @@ class Crypto {
 
   factory Crypto.fromJson(Map<String, dynamic> json) {
     return Crypto(
-      USD: json["USD"] as CryptoDetail,
-      GBP: json["GBP"] as CryptoDetail,
-      EUR: json["EUR"] as CryptoDetail,
+      USD: CryptoDetail.fromJson(json["USD"]),
+      GBP: CryptoDetail.fromJson(json["GBP"]),
+      EUR: CryptoDetail.fromJson(json["EUR"]),
     );
   }
 
   Map<String, dynamic> toJson() => {
-    'USD': USD,
-    'GBP': GBP,
-    'EUR': EUR,
+    'USD': USD.toJson(),
+    'GBP': GBP.toJson(),
+    'EUR': EUR.toJson(),
   };
 }
