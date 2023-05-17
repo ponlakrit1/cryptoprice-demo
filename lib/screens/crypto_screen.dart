@@ -1,10 +1,12 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../models/current_price.dart';
 import '../providers/crypto_provider.dart';
+import '../routes.dart';
 import '../utils/style.dart';
 
 class CryptoScreen extends StatefulWidget {
@@ -43,10 +45,10 @@ class _CryptoScreenState extends State<CryptoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: kPrimaryColor,
             title: const Padding(
               padding: EdgeInsets.only(top: 10.0),
-              child: Text('Crypto'),
+              child: Text('DEMO'),
             ),
         ),
         body: Consumer(
@@ -55,23 +57,35 @@ class _CryptoScreenState extends State<CryptoScreen> {
               children: [
                 Card(
                   child: ListTile(
-                    leading: const Icon(IconData(0xf04df, fontFamily: 'MaterialIcons')),
-                    title: Text(provider.currentPrice.bpi.USD.code, style: kTextStyleSubHeader,),
+                    leading: const Icon(IconData(0xe0b2, fontFamily: 'MaterialIcons')),
+                    title: Text(provider.currentPrice.bpi.USD.code, style: kTextStyleSubHeaderPrimary,),
                     subtitle: Text(provider.currentPrice.bpi.USD.rate, style: kTextStyleHeader,),
+                    trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
+                    onTap: () {
+                      Navigator.pushNamed(context, RoutePaths.CryptoDetail);
+                    },
                   ),
                 ),
                 Card(
                   child: ListTile(
                     leading: const Icon(IconData(0xf04df, fontFamily: 'MaterialIcons')),
-                    title: Text(provider.currentPrice.bpi.EUR.code, style: kTextStyleSubHeader,),
+                    title: Text(provider.currentPrice.bpi.EUR.code, style: kTextStyleSubHeaderPrimary,),
                     subtitle: Text(provider.currentPrice.bpi.EUR.rate, style: kTextStyleHeader,),
+                    trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
+                    onTap: () {
+                      Navigator.pushNamed(context, RoutePaths.CryptoDetail);
+                    },
                   ),
                 ),
                 Card(
                   child: ListTile(
                     leading: const Icon(IconData(0xe23b, fontFamily: 'MaterialIcons')),
-                    title: Text(provider.currentPrice.bpi.GBP.code, style: kTextStyleSubHeader,),
+                    title: Text(provider.currentPrice.bpi.GBP.code, style: kTextStyleSubHeaderPrimary,),
                     subtitle: Text(provider.currentPrice.bpi.GBP.rate, style: kTextStyleHeader,),
+                    trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
+                    onTap: () {
+                      Navigator.pushNamed(context, RoutePaths.CryptoDetail);
+                    },
                   ),
                 ),
               ],

@@ -8,7 +8,6 @@ ThemeData mainTheme(BuildContext context) {
   return ThemeData(
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: Colors.white,
-    appBarTheme: appBarTheme,
     fontFamily: 'Kanit',
   );
 }
