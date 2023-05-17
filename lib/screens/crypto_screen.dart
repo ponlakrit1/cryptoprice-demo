@@ -62,7 +62,7 @@ class _CryptoScreenState extends State<CryptoScreen> {
                     subtitle: Text(provider.currentPrice.bpi.USD.rate, style: kTextStyleHeader,),
                     trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
                     onTap: () {
-                      Navigator.pushNamed(context, RoutePaths.CryptoDetail);
+                      provider.gotoCryptoDetailScreen(context, "USD");
                     },
                   ),
                 ),
@@ -73,7 +73,7 @@ class _CryptoScreenState extends State<CryptoScreen> {
                     subtitle: Text(provider.currentPrice.bpi.EUR.rate, style: kTextStyleHeader,),
                     trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
                     onTap: () {
-                      Navigator.pushNamed(context, RoutePaths.CryptoDetail);
+                      provider.gotoCryptoDetailScreen(context, "EUR");
                     },
                   ),
                 ),
@@ -84,7 +84,7 @@ class _CryptoScreenState extends State<CryptoScreen> {
                     subtitle: Text(provider.currentPrice.bpi.GBP.rate, style: kTextStyleHeader,),
                     trailing: const Icon(Icons.arrow_forward_ios, color: kPrimaryColor,),
                     onTap: () {
-                      Navigator.pushNamed(context, RoutePaths.CryptoDetail);
+                      provider.gotoCryptoDetailScreen(context, "GBP");
                     },
                   ),
                 ),
